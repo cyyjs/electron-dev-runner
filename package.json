@@ -1,0 +1,54 @@
+{
+  "name": "electron-dev-runner",
+  "version": "1.0.0",
+  "description": "electron development run environment",
+  "main": "./lib/index.js",
+  "bin": {
+    "electron-dev-runner": "./lib/bin.js"
+  },
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint lib --ext .js --fix"
+  },
+  "homepage": "",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "electron",
+    "vite",
+    "ts"
+  ],
+  "dependencies": {
+    "argv-parse": "^1.0.1",
+    "chalk": "^4.1.0",
+    "shelljs": "^0.8.4",
+    "typescript": "^4.2.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "eslint": "^7.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.3.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint",
+      "pre-push": "yarn lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  }
+}
