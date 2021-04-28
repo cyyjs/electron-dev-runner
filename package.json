@@ -1,6 +1,6 @@
 {
   "name": "electron-dev-runner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "electron development run environment",
   "main": "./lib/index.js",
   "bin": {
@@ -22,6 +22,7 @@
   "dependencies": {
     "argv-parse": "^1.0.1",
     "chalk": "^4.1.0",
+    "chokidar": "^3.5.1",
     "shelljs": "^0.8.4",
     "typescript": "^4.2.3"
   },
