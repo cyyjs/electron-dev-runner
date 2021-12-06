@@ -1,6 +1,6 @@
 {
   "name": "electron-dev-runner",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "electron development run environment",
   "main": "./lib/index.js",
   "bin": {
